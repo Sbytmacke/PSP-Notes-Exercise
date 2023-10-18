@@ -1,0 +1,2 @@
+Error: no se ha encontrado o cargado la clase principal C:.Users.chivi.Desktop.git-ephemeral.PractiseExam.target.classes.process.b2.HijoEscribeArchivo.class
+Causado por: java.lang.ClassNotFoundException: C:.Users.chivi.Desktop.git-ephemeral.PractiseExam.target.classes.process.b2.HijoEscribeArchivo.class

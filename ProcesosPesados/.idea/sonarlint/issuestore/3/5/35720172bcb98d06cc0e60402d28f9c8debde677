@@ -1,0 +1,7 @@
+
+Q	java:S125"<This block of commented-out lines of code should be removed.(¥›Š¢
+t
+java:S2142#"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ò¶È
+V	java:S125"<This block of commented-out lines of code should be removed.(î¶Î²ÿÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(ñ—¸½úÿÿÿÿ
+E	java:S106!"+Replace this use of System.out by a logger.(Ô×œÿÿÿÿÿ

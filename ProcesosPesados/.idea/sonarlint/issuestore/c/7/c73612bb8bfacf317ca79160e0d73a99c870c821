@@ -1,0 +1,11 @@
+
+K
+java:S1854"5Remove this useless assignment to local variable "p".(×¹Þå
+@	java:S106
+"+Replace this use of System.out by a logger.(ûÖ•Á
+l
+java:S3457"Q%n should be used in place of \n to produce the platform-specific line separator.(€èÓ üÿÿÿÿ
+E	java:S106"+Replace this use of System.out by a logger.(€èÓ üÿÿÿÿ
+<
+java:S1481"&Remove this unused "p" local variable.(×¹Þå
+@	java:S106"+Replace this use of System.err by a logger.(ˆ¹çí

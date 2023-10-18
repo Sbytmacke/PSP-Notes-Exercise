@@ -1,0 +1,2 @@
+Error: no se ha encontrado o cargado la clase principal org.example.process.b2.HijoEscribeArchivo
+Causado por: java.lang.ClassNotFoundException: org.example.process.b2.HijoEscribeArchivo
