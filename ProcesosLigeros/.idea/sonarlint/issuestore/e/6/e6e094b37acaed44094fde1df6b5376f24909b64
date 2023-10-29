@@ -1,0 +1,25 @@
+
+J
+java:S1604U"(Make this anonymous inner class a lambda(¬Ï³şÿÿÿÿ8ÅÿÊ°¶1
+]	java:S125"<This block of commented-out lines of code should be removed.(ÎµÆ¾úÿÿÿÿ8âÃ°¶1
+G	java:S106"+Replace this use of System.out by a logger.(”‡–è8í¼°°¶1
+L	java:S106"+Replace this use of System.out by a logger.(‹Íõùÿÿÿÿ8í¼°°¶1
+G	java:S106"+Replace this use of System.out by a logger.(™¯ô§8ï¼°°¶1
+L	java:S106"+Replace this use of System.out by a logger.(Ù¦ûşÿÿÿÿ8ï¼°°¶1
+V
+java:S18543":Remove this useless assignment to local variable "random".(¼İÅf8ğ¼°°¶1
+:
+java:S21193"Save and re-use this "Random".(¼İÅf8ô¼°°¶1
+G
+java:S14813"+Remove this unused "random" local variable.(¼İÅf8ô¼°°¶1
+]	java:S1256"<This block of commented-out lines of code should be removed.(êôòüÿÿÿÿ8õ¼°°¶1
+o
+java:S1854="MRemove this useless assignment to local variable "allRowsToStartSumByThread".(â€¨¸úÿÿÿÿ8Ÿ§»°¶1
+`
+java:S1481=">Remove this unused "allRowsToStartSumByThread" local variable.(â€¨¸úÿÿÿÿ8 §»°¶1
+X	java:S125H"<This block of commented-out lines of code should be removed.(ì¼ìæ8ˆÙ¾°¶1
+]	java:S125J"<This block of commented-out lines of code should be removed.(…ñûĞşÿÿÿÿ8¢§»°¶1
+L	java:S106O"+Replace this use of System.out by a logger.(Ä‹úÿÿÿÿ8 €Ë°¶1
+G	java:S106c"+Replace this use of System.out by a logger.(üš¤–8¡€Ë°¶1
+G	java:S106f"+Replace this use of System.out by a logger.(êşĞ8¤€Ë°¶1
+G	java:S106v"+Replace this use of System.out by a logger.(Çİü¯8—Ï°¶1

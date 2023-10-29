@@ -1,17 +1,0 @@
-
-g	java:S112Y"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8†‰—´1
-•
-java:S1192"sDefine a constant instead of duplicating this literal "--------------------------------------------------" 3 times.(óÅ¾’şÿÿÿÿ8™ï­˜´1
-L	java:S106"+Replace this use of System.out by a logger.(óÅ¾’şÿÿÿÿ8Ù‰—´1
-L	java:S106"+Replace this use of System.out by a logger.(óÅ¾’şÿÿÿÿ8Ú‰—´1
-L	java:S106"+Replace this use of System.out by a logger.(óÅ¾’şÿÿÿÿ8ã‰—´1
-G	java:S106"+Replace this use of System.out by a logger.(™¯ô§8ä‰—´1
-L	java:S106"+Replace this use of System.out by a logger.(Ù¦ûşÿÿÿÿ8ŸÙ³—´1
-:
-java:S21193"Save and re-use this "Random".(¼İÅf8İ‰—´1
-{
-java:S2142X"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8â‰—´1
-G	java:S106]"+Replace this use of System.out by a logger.(ÅöÄß8İÆß—´1
-G	java:S106b"+Replace this use of System.out by a logger.(üš¤–8ïï­˜´1
-G	java:S106e"+Replace this use of System.out by a logger.(êşĞ8ôîİ˜´1
-G	java:S106q"+Replace this use of System.out by a logger.(Çİü¯8õîİ˜´1

@@ -1,0 +1,20 @@
+
+g	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8äù½¯¶1
+G	java:S106"+Replace this use of System.out by a logger.(”‡–è8îû½¯¶1
+L	java:S106"+Replace this use of System.out by a logger.(‹Íõùÿÿÿÿ8Šü½¯¶1
+G	java:S106"+Replace this use of System.out by a logger.(™¯ô§8Œü½¯¶1
+L	java:S106"+Replace this use of System.out by a logger.(Ù¦ûşÿÿÿÿ8Çü½¯¶1
+V
+java:S1854/":Remove this useless assignment to local variable "random".(¼İÅf8“ü½¯¶1
+:
+java:S2119/"Save and re-use this "Random".(¼İÅf8Ÿü½¯¶1
+G
+java:S1481/"+Remove this unused "random" local variable.(¼İÅf8¡ü½¯¶1
+]	java:S1252"<This block of commented-out lines of code should be removed.(êôòüÿÿÿÿ8¥ü½¯¶1
+I
+java:S1602E",Remove useless curly braces around statement(íåÖ8µü½¯¶1
+{
+java:S2142R"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(ä ¹€8¼ü½¯¶1
+G	java:S106Z"+Replace this use of System.out by a logger.(üš¤–8Éü½¯¶1
+G	java:S106]"+Replace this use of System.out by a logger.(êşĞ8Ñü½¯¶1
+G	java:S106l"+Replace this use of System.out by a logger.(Çİü¯8Õ­¿¯¶1

@@ -14,9 +14,9 @@ public class MyThread extends Thread {
 
     @Override
     public void run() {
-        if (id == 1) {
+      /*  if (id == 1) {
             setPriority(MAX_PRIORITY);
-        }
+        }*/
 
         System.out.println("Hola desde un thread heredado");
         System.out.println("Nombre del thread: " + Thread.currentThread().getName());

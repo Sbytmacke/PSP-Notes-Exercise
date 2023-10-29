@@ -1,22 +1,18 @@
 package dev.sbytmacke;
 
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicLong;
 
-public class AddMatrix {
+public class SumMatrixByThreads {
     // Con reales, no son de fiar, los decimales no son exacto
     // Si te pasas del número de CORES va peor, compiten los threads por la CPU
-    // Indicamos a cada hilo la fila inicial por la que debe sumar
     public static void main(String[] args) {
-        AddMatrix addMatrix = new AddMatrix();
-        int[][] matrix = addMatrix.generateRandomMatrix(1000, 1000);
-        addMatrix.sumMatrix(matrix, 2);
-        System.out.println("--------------------------------------------------");
-        addMatrix.sumMatrix(matrix, 4);
-        System.out.println("--------------------------------------------------");
-        addMatrix.sumMatrix(matrix, 8);
-        System.out.println("--------------------------------------------------");
-        addMatrix.sumMatrix(matrix, 16);
+        SumMatrixByThreads sumMatrixByThreads = new SumMatrixByThreads();
+        int[][] matrix = sumMatrixByThreads.generateRandomMatrix(5000, 5000);
+        long timeInit = System.currentTimeMillis();
+        int numThreads = Runtime.getRuntime().availableProcessors() - 4;
+        sumMatrixByThreads.sumMatrix(matrix, numThreads);
+        System.out.println("Tiempo tardado: " + (System.currentTimeMillis() - timeInit));
+        System.out.println("Para: " + numThreads + " threads");
     }
 
     private int[] divideAndConquer(int[][] matrix, int numThreads) {
@@ -31,11 +27,11 @@ public class AddMatrix {
         System.out.println("Filas extras: " + extraRows);
 
         int startRow = 0;
-        for (int i = 0; i < numThreads; i++) {
-            rowsToStartAddInEachThread[i] = startRow;
+        for (int posThread = 0; posThread < numThreads; posThread++) {
+            rowsToStartAddInEachThread[posThread] = startRow;
             if (extraRows > 0) {
                 // Sumamos el extraRow
-                startRow = startRow + rowsPerThread + extraRows;
+                startRow = startRow + rowsPerThread + 1;
                 extraRows--;
             } else {
                 startRow = startRow + rowsPerThread;
@@ -51,7 +47,7 @@ public class AddMatrix {
         Random random = new Random();
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = random.nextInt(10);
+                matrix[i][j] = 1;//random.nextInt(10);
             }
         }
         return matrix;
@@ -65,15 +61,13 @@ public class AddMatrix {
         long[] totalSumsByThread = new long[numThreads];
 
         // Crear los threads
-        AtomicLong totalTimeSumming = new AtomicLong(0L);
         Thread[] threads = new Thread[numThreads];
-        for (int i = 0; i < numThreads; i++) {
-            final int startRow = allRowsToStartSumByThread[i];
-            final int endRow = (i == numThreads - 1) ? matrix.length - 1 : allRowsToStartSumByThread[i + 1] - 1;
-            int indexThread = i;
-            threads[i] = new Thread(() -> {
-                long threadTime = sum(matrix, startRow, endRow, totalSumsByThread, indexThread);
-                totalTimeSumming.addAndGet(threadTime);
+        for (int posThread = 0; posThread < numThreads; posThread++) {
+            final int startRow = allRowsToStartSumByThread[posThread];
+            final int endRow = (posThread == threads.length - 1) ? matrix.length - 1 : allRowsToStartSumByThread[posThread + 1] - 1;
+            int indexThread = posThread; // Me pide hacer otra variable al meterlo en lambda
+            threads[posThread] = new Thread(() -> {
+                sum(matrix, startRow, endRow, totalSumsByThread, indexThread);
             });
         }
 
@@ -90,8 +84,6 @@ public class AddMatrix {
             }
         }
 
-        System.out.println("Tiempo total tardado: " + totalTimeSumming.get() + " milisegundos");
-
         // Imprimir la suma de cada Thread
         int totalSum = 0;
         for (int i = 0; i < numThreads; i++) {
@@ -102,17 +94,20 @@ public class AddMatrix {
     }
 
     private long sum(int[][] matrix, int startRow, int endRow, long[] totalSumsByThread, int indexThread) {
+        // Crear variables locales para la suma y volcar solamente al final del bucle
+
         long startTimeThread = System.currentTimeMillis();
+        long sumTotal = 0;
         // Recorremos la matriz solo en las filas asignadas al hilo
         for (int i = startRow; i <= endRow; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                totalSumsByThread[indexThread] += matrix[i][j];
+                sumTotal += matrix[i][j];
             }
         }
         long endTimeThread = System.currentTimeMillis();
         System.out.println("Tiempo tardado por Thread " + (indexThread + 1) + ": " + (endTimeThread - startTimeThread) + " milisegundos");
 
+        totalSumsByThread[indexThread] = sumTotal;
         return (endTimeThread - startTimeThread);
     }
-
 }

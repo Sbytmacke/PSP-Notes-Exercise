@@ -1,0 +1,14 @@
+
+E
+java:S1604"(Make this anonymous inner class a lambda(¦£ž¶8½•Ë®¶1
+\
+java:S1854.":Remove this useless assignment to local variable "futuro".(´ù¾Úüÿÿÿÿ8Îª®¯¶1
+b
+java:S1854""ERemove this useless assignment to local variable "servicioPeriodico".(¢ø¼¶8¹õ¹¯¶1
+G	java:S106"+Replace this use of System.out by a logger.(íížú8Î•Ë®¶1
+S
+java:S1481""6Remove this unused "servicioPeriodico" local variable.(¢ø¼¶8Ãõ¹¯¶1
+X	java:S125#"<This block of commented-out lines of code should be removed.(£¹‰‡8Ãõ¹¯¶1
+L	java:S106)"+Replace this use of System.out by a logger.(Û½‰Ñûÿÿÿÿ8Ñ•Ë®¶1
+M
+java:S1481."+Remove this unused "futuro" local variable.(´ù¾Úüÿÿÿÿ8Úª®¯¶1

@@ -1,5 +1,7 @@
 package dev.sbytmacke;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class FirstNotes {
     int sum = 0; // Compartir la variable de escritura con Threads en un problema de sincronización
 
@@ -54,5 +56,8 @@ public class FirstNotes {
         /* BUFFER OPTIMIZACIÓN */
         // Escribir en memoria principal, estableciendo un tamaño, corremos el riesgo de que no se guarde si se apaga la luz, pero es más rapido
         // que un buffer normal, ya que es buffer normal lee por línea y escribe al momento.
+
+        // Random numérico específico para threads, porque si no, se repite el mismo valor en todos los threads
+        System.out.println("Número aleatorio: " + ThreadLocalRandom.current().nextInt(0, 100 + 1));
     }
 }
